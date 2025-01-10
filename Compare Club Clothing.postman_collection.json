@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "4d314ccd-582e-4a72-9a76-8dc7d5c1bc1d",
+		"name": "Compare Club Clothing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5200251"
+	},
+	"item": [
+		{
+			"name": "Get Clothes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/clothing",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"clothing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cloth By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/clothing/1",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"clothing",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Clothing",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Wrgon\",\r\n    \"type\": \"T-Shirt\",\r\n    \"size\": \"Small\",\r\n    \"colour\": \"Red\",\r\n    \"price\": 29.99,\r\n    \"gender\": \"Males\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/clothing",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"clothing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Clothing Discount",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [1, 2, 3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/clothing/discount",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"clothing",
+						"discount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Clothing",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Nike-Updated\",\r\n    \"type\": \"T-Shirt\",\r\n    \"size\": \"Small\",\r\n    \"colour\": \"Red\",\r\n    \"price\": 29.99,\r\n    \"gender\": \"Male\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/clothing/1",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"clothing",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
